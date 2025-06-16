@@ -23,13 +23,13 @@ pipeline{
 
         stage("Restore dependencies"){
             steps{
-                bat "dotnet restore SeleniumIde.sln"
+                bat "dotnet restore SeleniumBasicExercise.sln"
             }
         }
 
         stage("Build"){
             steps{
-                bat "dotnet build SeleniumIde.sln --configure Release"
+                bat "dotnet build SeleniumBasicExercise.sln --configure Release"
             }
         }
 
