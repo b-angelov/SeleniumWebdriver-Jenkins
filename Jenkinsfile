@@ -32,25 +32,23 @@ pipeline{
                 bat "dotnet build SeleniumBasicExercise.sln"
             }
         }
+        
+        stage("Test project 1"){
+            steps{
+                bat "dotnet test TestProject1"
+            }
+        }
 
-        stage("Run tests"){
-                stage("Test project 1"){
-                    steps{
-                        bat "dotnet test TestProject1"
-                    }
-                }
+        stage("Test project 2"){
+            steps{
+                bat "dotnet test TestProject2"
+            }
+        }
 
-                stage("Test project 2"){
-                    steps{
-                        bat "dotnet test TestProject2"
-                    }
-                }
-
-                stage("Test project 3"){
-                    steps{
-                        bat "dotnet test TestProject3"
-                    }
-                }
+        stage("Test project 3"){
+            steps{
+                bat "dotnet test TestProject3"
+            }
         }
 
     }
