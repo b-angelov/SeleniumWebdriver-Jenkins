@@ -29,7 +29,7 @@ pipeline{
 
         stage("Build"){
             steps{
-                bat "dotnet build SeleniumBasicExercise.sln --configure Release"
+                bat "dotnet build SeleniumBasicExercise.sln"
             }
         }
 
