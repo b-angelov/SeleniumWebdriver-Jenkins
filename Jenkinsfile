@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage("Checkout code"){
             steps{
-                git branch: main, url: 'https://github.com/b-angelov/SeleniumWebdriver-Jenkins.git';
+                git branch: 'main', url: 'https://github.com/b-angelov/SeleniumWebdriver-Jenkins.git';
             }
         }
 
