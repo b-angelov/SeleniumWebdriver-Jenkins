@@ -34,7 +34,6 @@ pipeline{
         }
 
         stage("Run tests"){
-            parallel{
                 stage("Test project 1"){
                     steps{
                         bat "dotnet test TestProject1"
@@ -52,7 +51,6 @@ pipeline{
                         bat "dotnet test TestProject3"
                     }
                 }
-            }
         }
 
     }
